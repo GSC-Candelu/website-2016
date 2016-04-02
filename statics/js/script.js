@@ -31,6 +31,11 @@ gscApp.config(function($routeProvider) {
         controller  : 'mainController'
     })
     // route for the pitona page
+    .when('/pitona', {
+        templateUrl : 'pages/pitona.html',
+        controller  : 'mainController'
+    })
+    // route for the pitona page
     .when('/foto', {
         templateUrl : 'pages/foto.html',
         controller  : 'mainController'
