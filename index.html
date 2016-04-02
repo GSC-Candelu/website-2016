@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="gscApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Gruppo Sportivo &amp; Culturale Candelu' - Sagra del "1° de Majo" {{ year }}</title>
+
+  <!-- load bootstrap and fontawesome -->
+  <link rel="stylesheet" href="statics/libs/bootstrap-3-3-6.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="statics/css/main.css">
+
+</head>
+<body ng-controller="mainController">
+
+        <nav class="navbar .navbar-fixed-top">
+
+          <a class="navbar-brand" href="#/">Sagra del "1° de Majo" {{ year }}</a>
+
+          <ul class="nav navbar-nav" ng-controller="headActiveController">
+
+              <li class="nav-item" ng-class="{ active: isActive('/')}">
+                  <a class="nav-link" href="#/">
+                      <i class="fa fa-fort-awesome"></i> Homepage</a>
+              </li>
+
+              <li class="nav-item" ng-class="{ active: isActive('/programma')}">
+                  <a class="nav-link" href="#programma">
+                      <i class="fa fa-calendar"></i> Programma</a>
+              </li>
+
+              <li class="nav-item" ng-class="{ active: isActive('/mostra-dei-vini')}">
+                  <a class="nav-link" href="#mostra-dei-vini">
+                      <i class="fa fa-glass"></i> Mostra dei Vini</a>
+              </li>
+
+              <li class="nav-item" ng-class="{ active: isActive('/eventi')}">
+                  <a class="nav-link" href="#eventi">
+                      <i class="fa fa-motorcycle"></i> Eventi</a>
+              </li>
+
+              <li class="nav-item" ng-class="{ active: isActive('/foto')}">
+                  <a class="nav-link" href="#foto">
+                      <i class="fa fa-camera"></i> Foto</a>
+              </li>
+
+              <li class="nav-item" ng-class="{ active: isActive('/contatti')}">
+                  <a class="nav-link" href="#contatti">
+                      <i class="fa fa-phone"></i> Contatti</a>
+              </li>
+
+            </ul>
+        </nav>
+
+        <div ng-view><!-- Main content is injected here --></div>
+
+        <hr>
+        <footer>
+          <p>&copy; Gruppo sportivo &amp; Culturale, Candelu' {{ year }} | <a href="samuele-mattiuzzo.github.io">Samuele Mattiuzzo</a></p>
+        </footer>
+    </div>
+</body>
+
+    <!-- load angular and angular route -->
+    <script src="statics/libs/angular-1-5-3.min.js"></script>
+    <script src="statics/libs/angular-route-1-5-3.min.js"></script>
+    <script src="statics/libs/jquery-1-12-2.min.js"></script>
+    <script src="statics/libs/bootstrap-3-3-6.min.js"></script>
+    <script src="statics/js/script.js"></script>
+
+</html>
