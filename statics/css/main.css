@@ -1,11 +1,10 @@
-/* main css file */
 /*
  * dark-green: #245917
  * green: #50922C
  * main color: #666
  * white: #FFF
  * jumbotron: #a1c48a
- */
+*/
 
 /* overall styles */
 body { color: #666; }
@@ -13,7 +12,7 @@ body { color: #666; }
 h1, h2, h3,
 i { color: #50922C; }
 
-/* nav and jumbotron */
+/* nav */
 nav {
     max-height: 15px;
     margin: 0;
@@ -30,6 +29,7 @@ a:hover { color: #50922C; }
 .active a:hover { color: #50922C; }
 
 /* sagra */
+/* foto */
 .jumbotron {
     background: url('../images/logo-gruppo-sportivo-candelu.jpg') no-repeat left center;
     background-color: #a1c48a;
@@ -51,6 +51,7 @@ a:hover { color: #50922C; }
 /* vini */
 
 /* eventi */
+/* pitona */
 .bx-wrapper .bx-pager {
     bottom: -80px;
 }
@@ -86,4 +87,16 @@ a:hover { color: #50922C; }
 footer {
     color: #50922C;
     text-align: center;
+}
+
+/* utility class */
+.building {
+    color: #50922C;
+    margin:auto;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+.building img {
+    width: 50%;
 }
