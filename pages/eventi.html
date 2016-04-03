@@ -1,43 +1,25 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div class="container">
+    <ul class="bxslider">
+      <li><img src="/statics/images/eventi-scopa-2016.jpg" /></li>
+      <li><img src="/statics/images/eventi-bocce-borella-2016.jpg" /></li>
+      <li><img src="/statics/images/eventi-moto-2016.jpg" /></li>
+      <li><img src="/statics/images/eventi-pedalata-2016.jpg" /></li>
+    </ul>
+</div>
 
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-  </ol>
-
-  <div class="carousel-inner" role="listbox">
-
-      <div class="carousel-item active">
-        <img class="first-slide" src="statics/images/eventi-scopa-{{ year }}.jpg"
-             alt="Gara di scopa all'asso {{ year }}">
-      </div>
-
-    <div class="carousel-item">
-      <img class="first-slide" src="statics/images/eventi-bocce-borella-{{ year }}.jpg"
-           alt="Gara di bocce e borella in notturna {{ year }}">
-    </div>
-
-    <div class="carousel-item">
-      <img class="first-slide" src="statics/images/eventi-moto-{{ year }}.jpg"
-           alt="Motoconcentrazione memorial 'Su e so par ponti e canève - memorial Piero Voltarel' {{ year }}">
-    </div>
-
-    <div class="carousel-item">
-      <img class="first-slide" src="statics/images/eventi-pedalata-{{ year }}.jpg"
-           alt="Pedalata ecologica {{ year }}">
-    </div>
-
-  </div>
-
-  <span class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <i class="fa fa-chevron-left"></i>
-    <span class="sr-only">Precedente</span>
-  </span>
-
-  <span class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <i class="fa fa-chevron-rigth"></i>
-    <span class="sr-only">Successiva</span>
-  </span>
-</div><!-- /.carousel -->
+<script>
+$('.bxslider').bxSlider({
+  buildPager: function(slideIndex){
+    switch(slideIndex){
+      case 0:
+        return '<img src="/statics/images/eventi-scopa-2016-t.jpg">';
+      case 1:
+        return '<img src="/statics/images/eventi-bocce-borella-2016-t.jpg">';
+      case 2:
+        return '<img src="/statics/images/eventi-moto-2016-t.jpg">';
+      case 3:
+        return '<img src="/statics/images/eventi-pedalata-2016-t.jpg">';
+    }
+  }
+});
+</script>

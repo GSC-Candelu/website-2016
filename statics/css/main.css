@@ -42,45 +42,36 @@ a:hover { color: #50922C; }
 }
 
 /* sagra */
+
 /* programma */
+
 /* vini */
+
 /* eventi */
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-  min-height: 500px;
+.bx-wrapper .bx-pager {
+    bottom: -80px;
 }
 
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  background-color: #FFF;
-  text-align: center;
-  height: 500px;
-}
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 450px;
-  height: 500px;
+.bx-wrapper .bx-pager a {
+    border: solid #ccc 1px;
+    display: block;
+    margin: 0 5px;
+    padding: 3px;
+    width: 50px;
 }
 
-.carousel-indicators {
-  top: 1.5rem;
-  right: 1.5rem;
-  bottom: auto;
-  left: auto;
-  width: 1rem;
-  margin-left: 0;
+.bx-wrapper .bxslider li img{
+    margin: auto;
 }
 
-.carousel-indicators > li {
-  margin-bottom: .25rem;
+.bx-wrapper {
+    width: 60%;
+    margin-bottom: 90px;
+    margin-top: 5px;
 }
+
 /* foto */
+
 /* contatti */
 .contatti { text-align: center; }
 .contatti-jumbotron {
