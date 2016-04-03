@@ -1,9 +1,9 @@
 <div class="container">
     <ul class="bxslider">
-      <li><img src="/statics/images/eventi-scopa-2016.jpg" /></li>
-      <li><img src="/statics/images/eventi-bocce-borella-2016.jpg" /></li>
-      <li><img src="/statics/images/eventi-moto-2016.jpg" /></li>
-      <li><img src="/statics/images/eventi-pedalata-2016.jpg" /></li>
+      <li><img src="{{ statics }}images/eventi-scopa-2016.jpg" /></li>
+      <li><img src="{{ statics }}images/eventi-bocce-borella-2016.jpg" /></li>
+      <li><img src="{{ statics }}images/eventi-moto-2016.jpg" /></li>
+      <li><img src="{{ statics }}images/eventi-pedalata-2016.jpg" /></li>
     </ul>
 </div>
 
@@ -12,13 +12,13 @@ $('.bxslider').bxSlider({
   buildPager: function(slideIndex){
     switch(slideIndex){
       case 0:
-        return '<img src="/statics/images/eventi-scopa-2016-t.jpg">';
+        return '<img src="{{ statics }}images/eventi-scopa-2016-t.jpg">';
       case 1:
-        return '<img src="/statics/images/eventi-bocce-borella-2016-t.jpg">';
+        return '<img src="{{ statics }}images/eventi-bocce-borella-2016-t.jpg">';
       case 2:
-        return '<img src="/statics/images/eventi-moto-2016-t.jpg">';
+        return '<img src="{{ statics }}images/eventi-moto-2016-t.jpg">';
       case 3:
-        return '<img src="/statics/images/eventi-pedalata-2016-t.jpg">';
+        return '<img src="{{ statics }}images/eventi-pedalata-2016-t.jpg">';
     }
   }
 });
