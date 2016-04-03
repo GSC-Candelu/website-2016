@@ -1,7 +1,7 @@
 <div class="container">
     <ul class="bxslider">
-      <li><img src="/statics/images/pitona-0.jpg" /></li>
-      <li><img src="/statics/images/pitona-1.jpg" /></li>
+      <li><img src="{{ statics }}images/pitona-0.jpg" /></li>
+      <li><img src="{{ statics }}images/pitona-1.jpg" /></li>
     </ul>
 </div>
 
@@ -10,9 +10,9 @@ $('.bxslider').bxSlider({
   buildPager: function(slideIndex){
     switch(slideIndex){
       case 0:
-        return '<img src="/statics/images/pitona-0-t.jpg">';
+        return '<img src="{{ statics }}images/pitona-0-t.jpg">';
       case 1:
-        return '<img src="/statics/images/pitona-1-t.jpg">';
+        return '<img src="{{ statics }}images/pitona-1-t.jpg">';
     }
   }
 });

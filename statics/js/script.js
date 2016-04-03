@@ -1,5 +1,6 @@
 // create the module and name it
 var gscApp = angular.module('gscApp', ['ngRoute']),
+    _STATICS_ROOT_ = 'statics/',
     _YEAR_ = '2016',
     _START_ = ['22', '4', _YEAR_],
     _END_ = ['8', '5', _YEAR_];
@@ -52,6 +53,7 @@ gscApp.controller('mainController', function($scope) {
    // main controller, creates context
    $scope.year = _YEAR_;
    $scope.sagra_start = _START_;
+   $scope.statics = _STATICS_ROOT_;
 });
 
 gscApp.controller('headActiveController', function($scope, $location) {
