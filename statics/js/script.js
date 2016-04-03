@@ -57,7 +57,10 @@ gscApp.controller('mainController', function($scope) {
 gscApp.controller('headActiveController', function($scope, $location) {
     // tells the nav bar which element is active
     $scope.isActive = function (viewLocation) {
-        return $location.path().indexOf(viewLocation) == 0;
+        return (
+            $location.path().indexOf(viewLocation) == 0 &&
+            $location.path().length == viewLocation.length
+        )
     };
 });
 
