@@ -70,13 +70,6 @@ gscApp.controller('mainController', function($scope) {
    $scope.statics = _STATICS_ROOT_;
 });
 
-gscApp.controller('headActiveController', function($scope, $location) {
-    // tells the nav bar which element is active
-    $scope.isActive = function (viewLocation) {
-        return $location.path() === viewLocation;
-    };
-});
-
 gscApp.controller('eventiController', function($scope) {
     $scope.items = _EVENTI_;
 });
@@ -92,11 +85,28 @@ gscApp.controller('countdownController', function($scope) {
 
 
 // directives
+gscApp.directive('isActiveNav', [ '$location', function($location) {
+    return {
+        restrict: 'A',
+            link: function(scope, element) {
+                scope.location = $location;
+                scope.$watch('location.path()', function(currentPath) {
+                    if('/#' + currentPath === element[0].attributes['href'].nodeValue) {
+                        element.parent().addClass('activeNav');
+                    } else {
+                        element.parent().removeClass('activeNav');
+                    }
+                });
+            }
+        };
+    }]
+);
+
 gscApp.directive('carouselElement', function() {
     return {
-        scope: true,
         restrict: 'A',
         link: function(scope, element, attribute) {
+            debugger;
             element.bxSlider({
                 buildPager: function(slideIndex) {
                     return '<img src="' + scope.statics + 'images/' + scope.items[slideIndex] + '-t.jpg">';
