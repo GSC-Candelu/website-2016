@@ -1,9 +1,6 @@
-<div class="container">
-    <ul class="bxslider">
-      <li><img src="{{ statics }}images/eventi-scopa-2016.jpg" /></li>
-      <li><img src="{{ statics }}images/eventi-bocce-borella-2016.jpg" /></li>
-      <li><img src="{{ statics }}images/eventi-moto-2016.jpg" /></li>
-      <li><img src="{{ statics }}images/eventi-pedalata-2016.jpg" /></li>
+<div class="container" ng-controller="sliderController">
+    <ul class="bxslider" ng-repeat="item in items">
+      <li><img src="{{ statics }}images/{{ item }}" /></li>
     </ul>
 </div>
 
