@@ -24,12 +24,8 @@ a,
 a:visited,
 a:hover { color: #50922C; }
 
-.activeNav,
-.activeNav a,
-.activeNav a:focus,
-.activeNav a:active,
-.activeNav a:visited,
-.activeNav a:hover { background-color: #a1c48a; color: white; }
+.nav > li.activeNav > a,
+.nav > li.activeNav > a:focus { background-color: #a1c48a; color: #fff; }
 
 /* sagra */
 /* foto */
