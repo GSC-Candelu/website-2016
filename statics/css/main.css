@@ -28,7 +28,6 @@ a:hover { color: #50922C; }
 .nav > li.activeNav > a:focus { background-color: #a1c48a; color: #fff; }
 
 /* sagra */
-/* foto */
 .jumbotron {
     background: url('../images/logo-gruppo-sportivo-candelu.jpg') no-repeat left center;
     background-color: #a1c48a;
@@ -43,7 +42,6 @@ a:hover { color: #50922C; }
                         inset  0 -8px 8px -8px #245917;
 }
 
-/* programma */
 .home {
     text-align: center;
 }
@@ -54,50 +52,57 @@ a:hover { color: #50922C; }
     border: 5px solid #a1c48a;
 }
 
+/* programma */
 /* vini */
+.flyer {
+    text-align: center;
+    border-top: 5px solid #a1c48a;
+    -moz-box-shadow:    inset  0  8px 8px -8px #245917;
+    -webkit-box-shadow: inset  0  8px 8px -8px #245917;
+     box-shadow:        inset  0  8px 8px -8px #245917;
+}
+
+.flyer img {
+    margin: 10px auto 10px auto;
+    display: block;
+    min-width: 650px;
+}
 
 /* eventi */
 /* pitona */
 .gsc-slider {
     display: block;
-    min-height: 650px;
-    border: 5px solid #a1c48a;
-    -moz-box-shadow:    inset  0  8px 8px -8px #245917,
-                        inset  0 -8px 8px -8px #245917;
-    -webkit-box-shadow: inset  0  8px 8px -8px #245917,
-                        inset  0 -8px 8px -8px #245917;
-     box-shadow:        inset  0  8px 8px -8px #245917,
-                        inset  0 -8px 8px -8px #245917;
+    min-height: 700px;
+    border-top: 5px solid #a1c48a;
+    -moz-box-shadow:    inset  0  8px 8px -8px #245917;
+    -webkit-box-shadow: inset  0  8px 8px -8px #245917;
+     box-shadow:        inset  0  8px 8px -8px #245917;
 }
 
 .gsc-slider > li {}
-.gsc-slider > li > img {}
-
-.bx-wrapper .bx-pager {
-    bottom: -80px;
-}
-
-.bx-wrapper .bx-pager a {
-
-}
-
-uib-slide > img {
-    margin: auto;
+.gsc-slider > li > img {
+    margin: 10px auto 10px auto;
     display: block;
     width: 500px;
 }
 
-.bx-wrapper {
-    width: 75%;
-    margin-bottom: 90px;
-    margin-top: 5px;
+.rn-carousel-control {
+    -webkit-transition: opacity .2s ease-out;
+    transition: opacity .2s ease-out;
+    font-size: 4rem;
+    font-weight: bold;
+    position: absolute;
+    top: 40%;
+    opacity: .75;
+    cursor: pointer;
+    color: #245917;
 }
 
-.bx-wrapper .bx-viewport {
-
-}
+.rn-carousel-control.rn-carousel-control-prev { left: 4.0em; }
+.rn-carousel-control.rn-carousel-control-next { right: 4.0em; }
 
 /* foto */
+/* tbd */
 
 /* contatti */
 .contatti { text-align: center; }
