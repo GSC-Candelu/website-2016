@@ -1,7 +1,9 @@
 <div class="container">
-    <ul class="bxslider" carousel-element>
-      <li ng-repeat="item in items">
-          <img ng-src="{{ statics }}images/{{ item }}.jpg" />
-      </li>
+    <ul class="gsc-slider"
+        rn-carousel
+        rn-carousel-controls
+        rn-carousel-controls-allow-loop>
+        <li ng-repeat="item in items">
+            <img ng-src="{{ statics }}images/{{ item }}.jpg" /></li>
     </ul>
 </div>

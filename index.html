@@ -9,7 +9,7 @@
 
   <!-- load bootstrap and fontawesome -->
   <link rel="stylesheet" href="statics/libs/bootstrap-3-3-6.min.css">
-  <link href="statics/libs/bxslider/jquery.bxslider.css" rel="stylesheet" />
+  <link rel="stylesheet" href="statics/libs/angular-carousel.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="statics/css/main.css">
 
@@ -18,46 +18,46 @@
 
         <nav class="navbar .navbar-fixed-top">
 
-          <a class="navbar-brand" href="/">Sagra del "1° de Majo" {{ year }}</a>
+          <a class="navbar-brand" href="/#/">Sagra del "1° de Majo" {{ year }}</a>
 
-          <ul class="nav navbar-nav" ng-controller="headActiveController">
+          <ul class="nav navbar-nav">
 
-              <li class="nav-item" ng-class="{'active': isActive('/')}">
-                  <a class="nav-link" href="#/">
+              <li class="nav-item">
+                  <a class="nav-link" is-active-nav href="/#/">
                       <i class="fa fa-fort-awesome"></i> Homepage</a>
               </li>
 
-              <li class="nav-item" ng-class="{'active': isActive('/programma')}">
-                  <a class="nav-link" href="#/programma">
+              <li class="nav-item">
+                  <a class="nav-link" is-active-nav href="/#/programma">
                       <i class="fa fa-calendar"></i> Programma</a>
               </li>
 
-              <li class="nav-item" ng-class="{'active': isActive('/mostra-dei-vini')}">
-                  <a class="nav-link" href="#/mostra-dei-vini">
+              <li class="nav-item">
+                  <a class="nav-link" is-active-nav href="/#/mostra-dei-vini">
                       <i class="fa fa-glass"></i> Mostra dei Vini</a>
               </li>
 
-              <li class="nav-item" ng-class="{'active': isActive('/eventi')}">
-                  <a class="nav-link" href="#/eventi">
+              <li class="nav-item">
+                  <a class="nav-link" is-active-nav href="/#/eventi">
                       <i class="fa fa-motorcycle"></i> Eventi</a>
               </li>
 
-              <li class="nav-item" ng-class="{'active': isActive('/pitona')}">
-                  <a class="nav-link" href="#/pitona">
+              <li class="nav-item">
+                  <a class="nav-link" is-active-nav href="/#/pitona">
                       <i class="fa fa-music"></i> Pitona</a>
               </li>
 
-              <li class="nav-item" ng-class="{'active': isActive('/foto')}">
-                  <a class="nav-link" href="#/foto">
+              <li class="nav-item">
+                  <a class="nav-link" is-active-nav href="/#/foto">
                       <i class="fa fa-camera"></i> Foto</a>
               </li>
 
-              <li class="nav-item" ng-class="{'active': isActive('/contatti')}">
-                  <a class="nav-link" href="#/contatti">
+              <li class="nav-item">
+                  <a class="nav-link" is-active-nav href="/#/contatti">
                       <i class="fa fa-phone"></i> Contatti</a>
               </li>
 
-            </ul>
+          </ul>
         </nav>
 
         <div ng-view><!-- Main content is injected here --></div>
@@ -72,9 +72,10 @@
     <!-- load angular and angular route -->
     <script src="statics/libs/jquery-1-12-2.min.js"></script>
     <script src="statics/libs/bootstrap-3-3-6.min.js"></script>
-    <script src="statics/libs/bxslider/jquery.bxslider.min.js"></script>
     <script src="statics/libs/angular-1-5-3.min.js"></script>
     <script src="statics/libs/angular-route-1-5-3.min.js"></script>
+    <script src="statics/libs/angular-touch.js"></script>
+    <script src="statics/libs/angular-carousel.min.js"></script>
     <script src="statics/js/script.js"></script>
 
 </html>

@@ -1,5 +1,5 @@
 // create the module and name it
-var gscApp = angular.module('gscApp', ['ngRoute']),
+var gscApp = angular.module('gscApp', ['ngRoute', 'ngTouch', 'angular-carousel']),
     _STATICS_ROOT_ = 'statics/',
     _YEAR_ = '2016',
     _START_ = ['22', '4', _YEAR_],
@@ -70,13 +70,6 @@ gscApp.controller('mainController', function($scope) {
    $scope.statics = _STATICS_ROOT_;
 });
 
-gscApp.controller('headActiveController', function($scope, $location) {
-    // tells the nav bar which element is active
-    $scope.isActive = function (viewLocation) {
-        return $location.path() === viewLocation;
-    };
-});
-
 gscApp.controller('eventiController', function($scope) {
     $scope.items = _EVENTI_;
 });
@@ -92,16 +85,19 @@ gscApp.controller('countdownController', function($scope) {
 
 
 // directives
-gscApp.directive('carouselElement', function() {
+gscApp.directive('isActiveNav', [ '$location', function($location) {
     return {
-        scope: true,
         restrict: 'A',
-        link: function(scope, element, attribute) {
-            element.bxSlider({
-                buildPager: function(slideIndex) {
-                    return '<img src="' + scope.statics + 'images/' + scope.items[slideIndex] + '-t.jpg">';
-                }
-            });
-        }
-    }
-});
+            link: function(scope, element) {
+                scope.location = $location;
+                scope.$watch('location.path()', function(currentPath) {
+                    if('/#' + currentPath === element[0].attributes['href'].nodeValue) {
+                        element.parent().addClass('activeNav');
+                    } else {
+                        element.parent().removeClass('activeNav');
+                    }
+                });
+            }
+        };
+    }]
+);
