@@ -65,7 +65,7 @@ a:hover { color: #50922C; }
 .flyer img {
     margin: 10px auto 10px auto;
     display: block;
-    min-width: 900px;
+    min-width: 100%;
 }
 
 /* eventi */
@@ -95,7 +95,13 @@ a:hover { color: #50922C; }
     top: 40%;
     opacity: .75;
     cursor: pointer;
-    color: #245917;
+    color: #a1c48a;
+    border-radius: 30%;
+    border: 5px solid #a1c48a;
+    width: 50px;
+    height: 70px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .rn-carousel-control.rn-carousel-control-prev { left: 4.0em; }
