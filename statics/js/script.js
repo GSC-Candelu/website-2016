@@ -91,7 +91,7 @@ gscApp.directive('isActiveNav', [ '$location', function($location) {
             link: function(scope, element) {
                 scope.location = $location;
                 scope.$watch('location.path()', function(currentPath) {
-                    if('/#' + currentPath === element[0].attributes['href'].nodeValue) {
+                    if('#' + currentPath === element[0].attributes['href'].nodeValue) {
                         element.parent().addClass('activeNav');
                     } else {
                         element.parent().removeClass('activeNav');
