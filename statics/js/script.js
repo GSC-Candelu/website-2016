@@ -1,5 +1,5 @@
 // create the module and name it
-var gscApp = angular.module('gscApp', ['ngRoute']),
+var gscApp = angular.module('gscApp', ['ngRoute', 'ngTouch', 'angular-carousel']),
     _STATICS_ROOT_ = 'statics/',
     _YEAR_ = '2016',
     _START_ = ['22', '4', _YEAR_],
@@ -101,17 +101,3 @@ gscApp.directive('isActiveNav', [ '$location', function($location) {
         };
     }]
 );
-
-gscApp.directive('carouselElement', function() {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attribute) {
-            debugger;
-            element.bxSlider({
-                buildPager: function(slideIndex) {
-                    return '<img src="' + scope.statics + 'images/' + scope.items[slideIndex] + '-t.jpg">';
-                }
-            });
-        }
-    }
-});

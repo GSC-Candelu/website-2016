@@ -58,20 +58,33 @@ a:hover { color: #50922C; }
 
 /* eventi */
 /* pitona */
+.gsc-slider {
+    display: block;
+    min-height: 650px;
+    border: 5px solid #a1c48a;
+    -moz-box-shadow:    inset  0  8px 8px -8px #245917,
+                        inset  0 -8px 8px -8px #245917;
+    -webkit-box-shadow: inset  0  8px 8px -8px #245917,
+                        inset  0 -8px 8px -8px #245917;
+     box-shadow:        inset  0  8px 8px -8px #245917,
+                        inset  0 -8px 8px -8px #245917;
+}
+
+.gsc-slider > li {}
+.gsc-slider > li > img {}
+
 .bx-wrapper .bx-pager {
     bottom: -80px;
 }
 
 .bx-wrapper .bx-pager a {
-    border: solid #ccc 1px;
-    display: block;
-    margin: 0 5px;
-    padding: 3px;
-    width: 50px;
+
 }
 
-.bx-wrapper .bxslider li img{
+uib-slide > img {
     margin: auto;
+    display: block;
+    width: 500px;
 }
 
 .bx-wrapper {
@@ -81,12 +94,7 @@ a:hover { color: #50922C; }
 }
 
 .bx-wrapper .bx-viewport {
-    border: 5px solid #a1c48a;
-    margin-top: -5px;
 
-    -moz-box-shadow: 0 0 0;
-    -webkit-box-shadow: 0 0 0;
-    box-shadow: 0 0 0;
 }
 
 /* foto */
